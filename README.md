@@ -13,3 +13,28 @@ initializes the project in the current directory, keeping the setup at the root 
 npm create vite@latest {project name} -- --template react
 ```
 creates a new subdirectory (named {project name} in this example) and initializes the project inside it, keeping the parent directory uncluttered with project files
+
+
+## Installing Tailwind CSS as a PostCSS plugin
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+https://tailwindcss.com/docs/installation/using-postcss
+```
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+    },
+  },
+  plugins: [
+  ],
+}
+```
+
